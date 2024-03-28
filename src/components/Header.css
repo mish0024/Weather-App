@@ -1,0 +1,11 @@
+.header {
+    background-color: var(--blue-bg-dark);
+    color: var(--white);
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  h1 {
+    margin: 0;
+    font-size: 3rem;
+  }

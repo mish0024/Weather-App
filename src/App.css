@@ -1,0 +1,21 @@
+:root {
+  --blue-bg-dark: #0A3171;
+  --blue-bg: #13408B;
+  --blue-border: #5477BA;
+  --blue-light: #6A95E5;
+  --blue-lighter: #335AA6;
+  --blue-main: #1C489C;
+  --error: #F15252;
+  --white: #ffffff;
+  --white-10: rgba(255, 255, 255, 0.10);
+}
+
+.feedback-bar {
+  display: flex;
+  padding: 16px 120px;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  background: var(--error);
+  color: white;
+}

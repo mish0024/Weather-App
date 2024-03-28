@@ -1,0 +1,23 @@
+.location-bar {
+    display: flex;
+    padding: 32px 120px;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    align-self: stretch;
+    color: var(--white);
+    background: var(--blue-bg);
+  }
+
+  @media only screen and (min-width: 45em){
+    .location-bar{
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media only screen and (min-width: 60em){
+    .location-bar{
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
