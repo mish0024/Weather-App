@@ -2,17 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import "./LocationCard.css"
 
-function LocationCard({ location, removeLocation, setSelectedLocation, isSelected }) {
+function LocationCard({ location, removeLoc, setSelectedLoc, isSelected }) {
   
   const handleRemove = (e) => {
     e.stopPropagation();
-    removeLocation(location.id);
+    removeLoc(location.id);
   };
 
   const cardClass = `location-card ${isSelected ? 'selected' : ''}`;
 
   return (
-    <div className={cardClass} onClick={() => setSelectedLocation(location)}>
+    <div className={cardClass} onClick={() => setSelectedLoc(location)}>
       <div>
         <h3>{location.name}</h3>
         <p>{location.country}</p>
@@ -24,8 +24,8 @@ function LocationCard({ location, removeLocation, setSelectedLocation, isSelecte
 
 LocationCard.propTypes = {
   location: PropTypes.object.isRequired,
-  removeLocation: PropTypes.func.isRequired,
-  setSelectedLocation: PropTypes.func.isRequired,
+  removeLoc: PropTypes.func.isRequired,
+  setSelectedLoc: PropTypes.func.isRequired,
   isSelected: PropTypes.bool,
 };
 

@@ -1,7 +1,9 @@
 .search-bar {
-    padding: 32px 120px;
-    border-bottom: 1px solid var(--blue-border);
-    background: var(--blue-bg);
+  display: flex;
+  align-items: center;
+  padding: 32px 120px;
+  border-bottom: 1px solid var(--blue-border);
+  background: var(--blue-bg);
   }
   
   .search-bar form {
@@ -9,7 +11,7 @@
     display: flex;
     align-items: stretch;
     justify-content: center;
-    gap: 12px;
+    gap: 20px;
     width: 100%;
     
   }
@@ -17,7 +19,7 @@
   .text-wrap {
     display: flex;
     padding: 14px;
-    width: 600px;
+    width: 550px;
     gap: 8px;
     border-radius: 10px;
     border: 1px solid var(--blue-bg);
@@ -43,7 +45,7 @@
     outline: none;
     border: none;
     color: var(--white);
-    width: 90%;
+    width: 100%;
     font-size: 1rem;
   }
   
@@ -75,3 +77,37 @@
     box-shadow: -8px 12px 42px 0px rgba(0, 0, 0, 0.08);
   
   }  
+  
+@media only screen and (max-width: 45rem) {
+  .search-bar form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .text-wrap {
+    width: 100%;
+  }
+
+  .inputtext {
+    padding: 14px;
+    width: 100%;
+  }
+
+  button {
+    margin-top: 16px;
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 65rem) {
+  .search-bar form {
+    display: flex;
+    align-items: center;
+  }
+
+  button {
+    margin-left: 8px;
+    width: auto;
+  }
+}

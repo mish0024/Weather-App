@@ -25,10 +25,10 @@ function SearchBar({ findLocation, fetchWeatherData, handleError }) {
         findLocation(location);
         fetchWeatherData(lat, lon);
       } else {
-        throw new Error('Failed to retrieve location data.');
+        throw new Error('Failed to get location data.');
       }
     } catch (error) {
-      handleError(error.message); //pass this message to the error message (feedback.jsx) and update component with that
+      handleError(error.message); 
     }
 
     setInputValue('');

@@ -3,19 +3,19 @@ import PropTypes from 'prop-types';
 import "./LocationBar.css"
 import LocationCard from './LocationCard';
 
-function LocationBar({ locations, removeLocation, setSelectedLocation, selectedLocation }) {
+function LocationBar({ locations, removeLoc, setSelectedLoc, selectedLoc }) {
   return (
     <div className="location-bar">
       {Array.isArray(locations) && locations.length > 0 ? (
         locations.map((location) => (
-          // console.log(setSelectedLocation.id),
-          // console.log(selectedLocation && location.id === selectedLocation.id),
+          // console.log(setSelectedLoc.id),
+          // console.log(selectedLoc && location.id === selectedLoc.id),
           <LocationCard 
           key={location.id} 
           location={location} 
-          removeLocation={removeLocation} 
-          setSelectedLocation={setSelectedLocation} 
-          isSelected={selectedLocation && location.id === selectedLocation.id} />
+          removeLoc={removeLoc} 
+          setSelectedLoc={setSelectedLoc} 
+          isSelected={selectedLoc && location.id === selectedLoc.id} />
         ))
       ) : (
         <h3>No locations added yet.</h3>
@@ -26,8 +26,8 @@ function LocationBar({ locations, removeLocation, setSelectedLocation, selectedL
 
 LocationBar.propTypes = {
   locations: PropTypes.array.isRequired,
-  removeLocation: PropTypes.func.isRequired,
-  setSelectedLocation: PropTypes.func.isRequired,
+  removeLoc: PropTypes.func.isRequired,
+  setSelectedLoc: PropTypes.func.isRequired,
 };
 
 export default LocationBar;
